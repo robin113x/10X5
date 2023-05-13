@@ -4,6 +4,14 @@ import java.util.Arrays;
 
 public class Q5_ChoclateDis {
     public static int minDiff(int[]arr,int m){
+        if (m == 0 || arr.length == 0)
+            return 0;
+        // Number of students cannot be
+        // more than number of packets
+        if (arr.length < m)
+            return -1;
+
+
         int minDiff = Integer.MAX_VALUE;
         Arrays.sort(arr);
         for (int i = 0; i+m-1 <arr.length; i++) {
