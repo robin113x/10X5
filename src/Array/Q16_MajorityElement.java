@@ -9,17 +9,21 @@ public class Q16_MajorityElement {
             for (int j = 0; j < arr.length; j++) {
                 if (arr[i]==arr[j]){
                     count++;
-                    idx=i;
+
                 }
             }
-            res = Math.max(res,count);
+            if (count>res){
+                res=count;
+                idx=i;
+            }
         }
+        System.out.println(idx);
         if (res>(arr.length)/2) return arr[idx];
         else
             return -1;
     }
     public static void main(String[] args) {
-        int A[]={3, 3, 4, 2, 4, 4, 2, 4};
+        int A[]={3, 3, 4};
         System.out.println(nSol(A));
 
     }
