@@ -5,6 +5,7 @@ public class Q8_SearchSortedRotaed {
         int low=0,high=arr.length-1;
         while (low<=high){
             int mid= low+(high-low)/2;
+            if (arr[mid]==x)return mid;
             if (arr[mid]>arr[low]){
                 if (x>arr[low]&& x<arr[mid])
                     high=mid-1;
@@ -19,6 +20,7 @@ public class Q8_SearchSortedRotaed {
       return -1;
     }
     public static void main(String[] args) {
-
+        int[]arr = {5,6,7,8,9,10,1,2,3,4};
+        System.out.println(search(arr,7));
     }
 }
