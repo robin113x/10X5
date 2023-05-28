@@ -22,7 +22,6 @@ public class Q1_CountInversion {
 
     public static int CountAndInverse(int[]arr,int low,int mid,int high){
         int res=0;
-
         int n=mid-low+1,m=high-mid;
         int[]left = new int[n];
         int[]right = new int[m];
