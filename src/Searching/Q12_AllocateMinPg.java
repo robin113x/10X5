@@ -1,5 +1,7 @@
 package Searching;
-
+/*
+RObin H00d
+ */
 public class Q12_AllocateMinPg {
     public static int sol(int []arr,int k){
         int n=arr.length;
