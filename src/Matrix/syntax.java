@@ -5,7 +5,7 @@ class syntax{
 
 	//**************************************************
 	private static void disp(int[][]mat){
-		System.out.println("**********************");
+		System.out.println("***Display*****");
 		for(int i=0;i<mat.length;i++){
 			for(int j=0;j<mat[i].length;j++){
 				System.out.print(mat[i][j]+" ");
