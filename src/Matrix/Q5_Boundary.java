@@ -1,9 +1,8 @@
 import java.util.*;
-class syntax{
-
-	pu
+class Q5_Boundary{
 
 
+	
 	private static void disp(int[][]mat){
 		System.out.println("**********************");
 		for(int i=0;i<mat.length;i++){
