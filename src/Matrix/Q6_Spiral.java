@@ -21,7 +21,7 @@ class Q6_Spiral{
 			}
 			if(scol<=ecol){
 				for(int i=erow;i>=srow;i--){
-					System.out.print(mat[i][scol]+" ");`
+					System.out.print(mat[i][scol]+" ");
 					li.add(mat[i][scol]);
 				}scol++;
 			}
