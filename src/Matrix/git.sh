@@ -1,5 +1,6 @@
 #!/bin/bash
-echo "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"
+echo "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"
+#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
 
 git add .
 git commit -m "10X5"
