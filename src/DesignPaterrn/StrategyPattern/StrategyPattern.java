@@ -1,26 +1,27 @@
 package DesignPaterrn.StrategyPattern;
 /*
-Define the Strategy Interface:
+1. Define the Strategy Interface:
+   - The `DriveStrategy` interface is defined with a single method `drive()`.
 
-The DriveStrategy interface is defined with a single method drive().
-Implement Concrete Strategies:
+2. Implement Concrete Strategies:
+   - The `NormalDrive`, `OffRoadDrive`, `SportsDrive`, and `XyzDrive` classes implement the `DriveStrategy` interface and provide their own implementation of the `drive()` method.
 
-The NormalDrive, OffRoadDrive, SportsDrive, and XyzDrive classes implement the DriveStrategy interface and provide their own implementation of the drive() method.
-Create the Context Class:
+3. Create the Context Class:
+   - The `Vehical` class serves as the context class that encapsulates the driving behavior.
+   - It has a member variable of type `DriveStrategy` named `driveObj`.
+   - The constructor of `Vehical` takes a `DriveStrategy` object and assigns it to the `driveObj` variable.
+   - The `drive()` method of `Vehical` class calls the `drive()` method of the `driveObj`.
 
-The Vehical class serves as the context class that encapsulates the driving behavior.
-It has a member variable of type DriveStrategy named driveObj.
-The constructor of Vehical takes a DriveStrategy object and assigns it to the driveObj variable.
-The drive() method of Vehical class calls the drive() method of the driveObj.
-Create Concrete Context Classes:
+4. Create Concrete Context Classes:
+   - The `GoodsVehical`, `offRoadVehical`, `SportsVehical`, and `ABC` classes extend the `Vehical` class and provide their own constructors.
+   - Each constructor calls the `super()` constructor of `Vehical` with the appropriate `DriveStrategy` object.
 
-The GoodsVehical, offRoadVehical, SportsVehical, and ABC classes extend the Vehical class and provide their own constructors.
-Each constructor calls the super() constructor of Vehical with the appropriate DriveStrategy object.
-Use the Context Class:
+5. Use the Context Class:
+   - In the `main()` method of the `StrategyPattern` class, different types of vehicles are instantiated.
+   - The `GoodsVehical` object uses the `NormalDrive` strategy, the `offRoadVehical` object uses the `OffRoadDrive` strategy, the `SportsVehical` object uses the `SportsDrive` strategy, and the `ABC` object uses the `XyzDrive` strategy.
+   - The `drive()` method is called on each object, and the respective strategy's `drive()` method is executed.
 
-In the main() method of the StrategyPattern class, different types of vehicles are instantiated.
-The GoodsVehical object uses the NormalDrive strategy, the offRoadVehical object uses the OffRoadDrive strategy, the SportsVehical object uses the SportsDrive strategy, and the ABC object uses the XyzDrive strategy.
-The drive() method is called on each object, and the respective strategy's drive() method is executed.
+By following the above steps, the Strategy pattern allows the driving behavior of each vehicle to be defined independently of the vehicle itself. This promotes flexibility, maintainability, and extensibility in the code.
  */
 // Step 1: Define the Strategy Interface
 interface DriveStrategy {
