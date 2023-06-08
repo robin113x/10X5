@@ -5,5 +5,11 @@ public class Main {
         ShapeFactory sf = new ShapeFactory();
         Shape circle = sf.createShape("circle");
         circle.draw();
+
+        Shape rect = sf.createShape("rectangle");
+        rect.draw();
+
+        Shape tri = sf.createShape("triangle");
+        tri.draw();
     }
 }
