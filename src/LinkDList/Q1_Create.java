@@ -2,6 +2,19 @@ import java.util.*;
 
 class Q1_Create{
 
+	//Array to LL
+	public static Node arrayToLL(int[]arr){
+		if(arr.length==0)return null;
+		Node head= new Node(arr[0]);
+		Node currNode =head;
+		for(int i=1;i<arr.length;i++){
+			Node node = new Node(arr[i]);
+			currNode.nxt=node;
+			currNode=node;
+		}
+		return head;
+	}
+
 	public static void printNodeRe(Node node){
 		if(node==null)return;
 		System.out.print(node.data+" ");
@@ -20,19 +33,15 @@ class Q1_Create{
 	}
 
 	public static void main(String[] args) {
-		Node head= new Node(10);
-		Node n1 = new Node(20);
-		Node n2 = new Node(30);
-		Node n3 = new Node(40);
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int []arr = new int[n];
+		for(int i=0;i<n;i++){
+			arr[i]=sc.nextInt();
+		}
 
-		head.nxt=n1;
-		n1.nxt=n2;
-		n2.nxt=n3;
-		n3.nxt=null;
-
-		printNodeRe(head);
-		System.out.println("\n**************");
-		printNodeIt(head);
+		Node node = arrayToLL(arr);
+		printNodeRe(node);
 
 
 	}
