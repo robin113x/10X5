@@ -4,7 +4,8 @@ package DesignPaterrn.StrategyPattern;
    - The `DriveStrategy` interface is defined with a single method `drive()`.
 
 2. Implement Concrete Strategies:
-   - The `NormalDrive`, `OffRoadDrive`, `SportsDrive`, and `XyzDrive` classes implement the `DriveStrategy` interface and provide their own implementation of the `drive()` method.
+   - The `NormalDrive`, `OffRoadDrive`, `SportsDrive`, and `XyzDrive` classes implement the `DriveStrategy`
+   interface and provide their own implementation of the `drive()` method.
 
 3. Create the Context Class:
    - The `Vehical` class serves as the context class that encapsulates the driving behavior.
@@ -18,10 +19,12 @@ package DesignPaterrn.StrategyPattern;
 
 5. Use the Context Class:
    - In the `main()` method of the `StrategyPattern` class, different types of vehicles are instantiated.
-   - The `GoodsVehical` object uses the `NormalDrive` strategy, the `offRoadVehical` object uses the `OffRoadDrive` strategy, the `SportsVehical` object uses the `SportsDrive` strategy, and the `ABC` object uses the `XyzDrive` strategy.
+   - The `GoodsVehical` object uses the `NormalDrive` strategy, the `offRoadVehical` object uses the `OffRoadDrive` strategy,
+   the `SportsVehical` object uses the `SportsDrive` strategy, and the `ABC` object uses the `XyzDrive` strategy.
    - The `drive()` method is called on each object, and the respective strategy's `drive()` method is executed.
 
-By following the above steps, the Strategy pattern allows the driving behavior of each vehicle to be defined independently of the vehicle itself. This promotes flexibility, maintainability, and extensibility in the code.
+By following the above steps, the Strategy pattern allows the driving behavior of each vehicle to be defined independently of
+ the vehicle itself. This promotes flexibility, maintainability, and extensibility in the code.
  */
 // Step 1: Define the Strategy Interface
 interface DriveStrategy {
