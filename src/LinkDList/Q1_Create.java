@@ -1,3 +1,4 @@
+
 import java.util.*;
 
 class Q1_Create{

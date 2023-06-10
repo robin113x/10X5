@@ -23,6 +23,23 @@ class Q2_InsertNode{
 		return head;
 	}
 
+	//Insert at Given Position
+	public static Node insertPos(Node node,int data,int pos){
+		Node temp = new Node(data);
+		if(pos==1){
+			temp.nxt=node;
+			return temp;
+		}
+		Node curr=node;
+		for(int i=1;i<=pos-2 && curr!=null;i++){
+			curr=curr.nxt;
+		}if(curr==null) return node; //Position Out Of Bound
+		temp.nxt=curr.nxt;
+		curr.nxt=temp;
+		return node;
+	}
+
+
 	//Array to LL
 	public static Node arrayToLL(int[]arr){
 		if(arr.length==0)return null;
@@ -59,6 +76,9 @@ class Q2_InsertNode{
 
 		System.out.println("\n*****");
 		temp = insertLast(temp,999);
+		printNodeRe(temp);
+		System.out.println("\n*****");
+		temp = insertPos(temp,88,3);
 		printNodeRe(temp);
 
 
